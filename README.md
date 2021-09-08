@@ -41,7 +41,7 @@ POSTGRES_USER=postgres
 $ ./scripts/entrypoint.sh
 ```
 
-5. (Optional) Make sure R is pre-installed and run the following command.
+5. (Optional) Make sure R is pre-installed and run the following command. For Steps 5 and 6, Step 3 is REQUIRED.
 
 ```
 $ ./scripts/run_app.sh
@@ -62,25 +62,36 @@ $ git clone git@github.com:liberaliscomputing/revelio-labs-assignment.git
 $ cd revelio-labs-assignment
 ```
 
-2. Make sure Docker and Docker Compose are pre-installed.
+2. (Required) On the current directory, create .env with the following environment variables polulated (DON'T change the hostname below):
 
-3. If you haven't done already, create a `revelio-labs-assignment` network.
+```
+# Postgres credentials
+POSTGRES_PASSWORD=<your-password>
+POSTGRES_DB=<your-db>
+POSTGRES_HOST=postgres
+POSTGRES_PORT=<your-port>
+POSTGRES_USER=<your-user>
+```
+
+3. Make sure Docker and Docker Compose are pre-installed.
+
+4. If you haven't done already, create a `revelio-labs-assignment` network.
 
 ```
 $ docker network create revelio-labs-assignment
 ```
 
-4. Bring up the Docker Compose stack.
+5. Bring up the Docker Compose stack.
 
 ```
 $ docker-compose up -d --build
 ```
 
-5. If run successfully, an R Shiny web application rendering the created tables is available at http://localhost:3838.
+6. If run successfully, an R Shiny web application rendering the created tables is available at http://localhost:3838.
 
 ![The Reporting Table](./docs/reporting.png)
 
-6. Bring down the Docker Compose stack when stopping all services.
+7. Bring down the Docker Compose stack when stopping all services.
 
 ```
 $ docker-compose down --remove-orphans -v [ --rmi all ]
