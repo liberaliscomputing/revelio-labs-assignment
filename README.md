@@ -47,7 +47,7 @@ $ ./scripts/entrypoint.sh
 $ ./scripts/run_app.sh
 ```
 
-6. (Optional) A R Shiny web application rendering the created tables is available at http://localhost:3838.
+6. (Optional) An R Shiny web application rendering the created tables is available at http://localhost:3838.
 
 ![The Reporting Table](./docs/reporting.png)
 
@@ -76,7 +76,7 @@ $ docker network create revelio-labs-assignment
 $ docker-compose up -d --build
 ```
 
-5. If run successfully, a R Shiny web application rendering the created tables is available at http://localhost:3838.
+5. If run successfully, an R Shiny web application rendering the created tables is available at http://localhost:3838.
 
 ![The Reporting Table](./docs/reporting.png)
 
