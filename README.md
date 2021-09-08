@@ -62,15 +62,15 @@ $ git clone git@github.com:liberaliscomputing/revelio-labs-assignment.git
 $ cd revelio-labs-assignment
 ```
 
-2. (Required) On the current directory, create .env with the following environment variables polulated (DON'T change the hostname below):
+2. (Required) On the current directory, create `.env` with the following environment variables as shown:
 
 ```
 # Postgres credentials
-POSTGRES_PASSWORD=<your-password>
-POSTGRES_DB=<your-db>
+POSTGRES_PASSWORD=password
+POSTGRES_DB=postgres
 POSTGRES_HOST=postgres
-POSTGRES_PORT=<your-port>
-POSTGRES_USER=<your-user>
+POSTGRES_PORT=5432
+POSTGRES_USER=postgres
 ```
 
 3. Make sure Docker and Docker Compose are pre-installed.
